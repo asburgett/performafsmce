@@ -40,4 +40,10 @@ php artisan make:migration create_technicians_table
 php artisan make:factory TechnicianFactory --model="App\Technician"
 php artisan make:test TechnicianTest
 
+php artisan make:model Inventory
+php artisan make:controller InventoryController --model=Inventory
+php artisan make:migration create_inventory_table
+php artisan make:factory Inventoryactory --model="App\Inventory"
+php artisan make:test InventoryTest
+
 php artisan migrate

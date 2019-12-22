@@ -99,6 +99,7 @@ class ComposerStaticInit3cf818478c830b617b6e3c125cd575e2
         'L' => 
         array (
             'League\\Flysystem\\' => 17,
+            'Laravel\\Ui\\' => 11,
             'Laravel\\Tinker\\' => 15,
         ),
         'J' => 
@@ -303,6 +304,10 @@ class ComposerStaticInit3cf818478c830b617b6e3c125cd575e2
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'Laravel\\Ui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/ui/src',
         ),
         'Laravel\\Tinker\\' => 
         array (
@@ -2109,6 +2114,13 @@ class ComposerStaticInit3cf818478c830b617b6e3c125cd575e2
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Laravel\\Ui\\AuthCommand' => __DIR__ . '/..' . '/laravel/ui/src/AuthCommand.php',
+        'Laravel\\Ui\\Presets\\Bootstrap' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Bootstrap.php',
+        'Laravel\\Ui\\Presets\\Preset' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Preset.php',
+        'Laravel\\Ui\\Presets\\React' => __DIR__ . '/..' . '/laravel/ui/src/Presets/React.php',
+        'Laravel\\Ui\\Presets\\Vue' => __DIR__ . '/..' . '/laravel/ui/src/Presets/Vue.php',
+        'Laravel\\Ui\\UiCommand' => __DIR__ . '/..' . '/laravel/ui/src/UiCommand.php',
+        'Laravel\\Ui\\UiServiceProvider' => __DIR__ . '/..' . '/laravel/ui/src/UiServiceProvider.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -4194,6 +4206,7 @@ class ComposerStaticInit3cf818478c830b617b6e3c125cd575e2
         'Tests\\Feature\\DepartmentsTest' => __DIR__ . '/../..' . '/tests/Feature/DepartmentsTest.php',
         'Tests\\Feature\\DivisionsTest' => __DIR__ . '/../..' . '/tests/Feature/DivisionsTest.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
+        'Tests\\Feature\\InventoryTest' => __DIR__ . '/../..' . '/tests/Feature/InventoryTest.php',
         'Tests\\Feature\\OrganizationsTest' => __DIR__ . '/../..' . '/tests/Feature/OrganizationsTest.php',
         'Tests\\Feature\\TeamsTest' => __DIR__ . '/../..' . '/tests/Feature/TeamsTest.php',
         'Tests\\Feature\\TechnicianTest' => __DIR__ . '/../..' . '/tests/Feature/TechnicianTest.php',

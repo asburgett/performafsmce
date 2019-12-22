@@ -15,7 +15,12 @@ class CreateWorkordersTable extends Migration
     {
         Schema::create('workorders', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('client_site_id');
+            $table->bigInteger('equipment_id');
+            $table->string('name');
+            $table->string('status');
             $table->timestamps();
+            $table->datetime('closed_at');
         });
     }
 

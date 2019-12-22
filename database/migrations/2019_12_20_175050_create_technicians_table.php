@@ -15,6 +15,7 @@ class CreateTechniciansTable extends Migration
     {
         Schema::create('technicians', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
             $table->timestamps();
         });
     }

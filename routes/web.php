@@ -19,4 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/clients', 'ClientController@index');
+
+Route::get('/clientsites', 'ClientSiteController@index');
+
 Route::get('/workorders', 'WorkorderController@index');

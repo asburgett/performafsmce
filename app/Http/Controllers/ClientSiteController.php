@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Workorder;
+use App\ClientSite;
 use Illuminate\Http\Request;
 
-class WorkorderController extends Controller
+class ClientSiteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class WorkorderController extends Controller
      */
     public function index()
     {
-        //return view('home');
-        return view('workorders.home');
+        return view('clientsites.home');
     }
 
     /**
@@ -42,10 +41,10 @@ class WorkorderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Workorder  $workorder
+     * @param  \App\ClientSite  $clientSite
      * @return \Illuminate\Http\Response
      */
-    public function show(Workorder $workorder)
+    public function show(ClientSite $clientSite)
     {
         //
     }
@@ -53,10 +52,10 @@ class WorkorderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Workorder  $workorder
+     * @param  \App\ClientSite  $clientSite
      * @return \Illuminate\Http\Response
      */
-    public function edit(Workorder $workorder)
+    public function edit(ClientSite $clientSite)
     {
         //
     }
@@ -65,10 +64,10 @@ class WorkorderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Workorder  $workorder
+     * @param  \App\ClientSite  $clientSite
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Workorder $workorder)
+    public function update(Request $request, ClientSite $clientSite)
     {
         //
     }
@@ -76,10 +75,10 @@ class WorkorderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Workorder  $workorder
+     * @param  \App\ClientSite  $clientSite
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Workorder $workorder)
+    public function destroy(ClientSite $clientSite)
     {
         //
     }

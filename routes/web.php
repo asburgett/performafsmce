@@ -23,4 +23,4 @@ Route::get('/clients', 'ClientController@index');
 
 Route::get('/clientsites', 'ClientSiteController@index');
 
-Route::get('/workorders', 'WorkorderController@index');
+Route::get('/workorders', 'WorkOrderController@index');

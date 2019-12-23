@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Workorder;
+use App\WorkOrder;
 use Illuminate\Http\Request;
 
-class WorkorderController extends Controller
+class WorkOrderController extends Controller
 {
     /**
      * Display a listing of the resource.

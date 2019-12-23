@@ -19,8 +19,34 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/clients', 'ClientController@index');
+// Organizational routes
+Route::get('/organizations', 'OrganizationController@index')->middleware('auth');
+Route::get('/organizations/{organization_id}', 'OrganizationController@show')->middleware('auth');
 
-Route::get('/clientsites', 'ClientSiteController@index');
+Route::get('/divisions', 'DivisionController@index')->middleware('auth');
+Route::get('/divisions/{division_id}', 'DivisionController@show')->middleware('auth');
+
+Route::get('/branches', 'BranchController@index')->middleware('auth');
+Route::get('/branches/{branch_id}', 'BranchController@show')->middleware('auth');
+
+Route::get('/departments', 'DepartmentController@index')->middleware('auth');
+Route::get('/departments/{department_id}', 'DepartmentController@show')->middleware('auth');
+
+Route::get('/teams', 'TeamController@index')->middleware('auth');
+Route::get('/teams/{team_id}', 'TeamController@show')->middleware('auth');
+
+// Logical routes
+Route::get('/jobs', 'JobController@index')->middleware('auth');
+Route::get('/jobs/{job_id}', 'JobController@show')->middleware('auth');
+
+Route::get('/clients', 'ClientController@index')->middleware('auth');
+Route::get('/clients/{client_id}', 'ClientController@show')->middleware('auth');
+
+Route::get('/clientsites', 'ClientSiteController@index')->middleware('auth');
+Route::get('/clientsites/{clientsite_id}', 'ClientSiteController@show')->middleware('auth');
+
+Route::get('/equipment', 'EquipmentController@index')->middleware('auth');
+Route::get('/equipment/{equipment_id}', 'EquipmentController@show')->middleware('auth');
 
 Route::get('/workorders', 'WorkOrderController@index');
+Route::get('/workorders/{workorder_id}', 'WorkOrderController@show')->middleware('auth');

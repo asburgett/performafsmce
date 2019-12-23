@@ -28,6 +28,12 @@ php artisan make:migration create_teams_table
 php artisan make:factory TeamFactory --model="App\Team"
 php artisan make:test TeamsTest
 
+php artisan make:model Job
+php artisan make:controller JobController --model=Job
+php artisan make:migration create_jobs_table
+php artisan make:factory JobFactory --model="App\Job"
+php artisan make:test JobTest
+
 php artisan make:model Client
 php artisan make:controller ClientController --model=Client
 php artisan make:migration create_clients_table

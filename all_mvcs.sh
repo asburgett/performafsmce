@@ -46,6 +46,12 @@ php artisan make:migration create_client_sites_table
 php artisan make:factory ClientSiteFactory --model="App\ClientSite"
 php artisan make:test ClientSiteTest
 
+php artisan make:model Equipment
+php artisan make:controller EquipmentController --model=Equipment
+php artisan make:migration create_equipment_table
+php artisan make:factory EquipmentFactory --model="App\Equipment"
+php artisan make:test EquipmentTest
+
 php artisan make:model Workorder
 php artisan make:controller WorkorderController --model=Workorder
 php artisan make:migration create_workorders_table

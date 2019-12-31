@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Client Sites - Home</div>
+                <div class="card-header">{{ $data['client_information'][0]->name }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    TODO: build Client dashboard here
                 </div>
             </div>
         </div>

@@ -15,6 +15,9 @@ class CreateClientSitesTable extends Migration
     {
         Schema::create('client_sites', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('client_id')->unsigned()->default(0);
+            $table->string('name');
+            $table->string('status');
             $table->timestamps();
         });
     }

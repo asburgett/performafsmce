@@ -21,7 +21,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Organizational routes
 Route::get('/organizations', 'OrganizationController@index')->middleware('auth');
-Route::get('/organizations/{organization_id}', 'OrganizationController@show')->middleware('auth');
+Route::post('/organizations', 'OrganizationController@store')->middleware('auth');
+Route::get('/organizations/create', 'OrganizationController@create')->middleware('auth');
+Route::get('/organizations/{organization}', 'OrganizationController@show')->middleware('auth');
+Route::get('/organizations/{organization}/edit', 'OrganizationController@edit')->middleware('auth');
+Route::put('/organizations/{organization}', 'OrganizationController@update')->middleware('auth');
+Route::delete('/organizations/{organization}', 'OrganizationController@delete')->middleware('auth');
 
 Route::get('/divisions', 'DivisionController@index')->middleware('auth');
 Route::get('/divisions/{division_id}', 'DivisionController@show')->middleware('auth');

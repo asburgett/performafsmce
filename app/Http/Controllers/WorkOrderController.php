@@ -15,7 +15,7 @@ class WorkOrderController extends Controller
     public function index()
     {
         $work_orders = WorkOrder::all();
-        return view('workorders.home', compact('work_orders'));
+        return view('work_orders.home', compact('work_orders'));
     }
 
     /**

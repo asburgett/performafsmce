@@ -14,8 +14,9 @@ class OrganizationController extends Controller
      */
     public function index()
     {
-        $organizations = Organization::all();
-        return view('organizations.home', compact('organizations'));
+        //$organizations = Organization::all();
+        //return view('organizations.index', compact('organizations'));
+        return view('organizations.index', ['organizations' => Organization::all()]);
     }
 
     /**
@@ -25,7 +26,8 @@ class OrganizationController extends Controller
      */
     public function create()
     {
-        //
+        // show a view to create a new organization
+        return view('organizations.create');
     }
 
     /**
@@ -36,7 +38,9 @@ class OrganizationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Organization::create($this->validateOrganization());
+
+        return redirect('/organizations');
     }
 
     /**
@@ -45,9 +49,10 @@ class OrganizationController extends Controller
      * @param  \App\Organization  $organization
      * @return \Illuminate\Http\Response
      */
+
     public function show(Organization $organization)
     {
-        //
+        return view('organizations.show', ['organization' => $organization]);
     }
 
     /**
@@ -58,7 +63,7 @@ class OrganizationController extends Controller
      */
     public function edit(Organization $organization)
     {
-        //
+        return view('organizations.edit', ['organization' => $organization]);
     }
 
     /**
@@ -68,9 +73,12 @@ class OrganizationController extends Controller
      * @param  \App\Organization  $organization
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Organization $organization)
+    //public function update(Request $request, Organization $organization)
+    public function update(Organization $organization)
     {
-        //
+        $organization->update($this->validateOrganization());
+
+        return redirect('/organizations/'. $organization->id);
     }
 
     /**
@@ -82,5 +90,12 @@ class OrganizationController extends Controller
     public function destroy(Organization $organization)
     {
         //
+    }
+
+    protected function validateOrganization()
+    {
+        return request()->validate([
+            'name' => ['required']
+        ]);
     }
 }

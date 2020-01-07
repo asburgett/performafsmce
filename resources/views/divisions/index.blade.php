@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Clients - Home&nbsp;<a href="/clients/create">(new)</a>
+                    Divisions - Home&nbsp;<a href="/divisions/create">(new)</a>
                 </div>
 
                 <div class="card-body">
@@ -16,8 +16,8 @@
                         </div>
                     @endif
                     <div>
-                        @foreach($clients as $client)                            
-                            <a href="/clients/{{ $client->id }}">{{ $client->name }}</a><br>
+                        @foreach($divisions as $division)
+                            <a href="/divisions/{{ $division->id }}">{{ $division->name }}</a><br>
                         @endforeach
                     </div>
                 </div>

@@ -5,9 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Organizations - New</div>
-                <form method="POST" action="/organizations">
+                <div class="card-header">Clients - Edit</div>
+                <form method="POST" action="/clients/{{ $client->id }}">
                     @csrf
+                    @method('PUT')
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -18,16 +19,7 @@
                         <div class="field">
                             <label class="label" for="name">Name</label>
                             <div class="control">
-                                <input 
-                                    class="input @error('title') is-danger @enderror"
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                    value="{{ old('title') }}"
-                                    required>
-                                @error('title')
-                                    <p class="help is-danger">{{ $errors->first('title') }}</p>
-                                @enderror
+                                <input class="input" type="text" name="name" id="name" value="{{ $client->name }}">
                             </div>
                         </div>
 

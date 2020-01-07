@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Organizations - New</div>
-                <form method="POST" action="/organizations">
+                <div class="card-header">Clients - New</div>
+                <form method="POST" action="/clients">
                     @csrf
                     <div class="card-body">
                         @if (session('status'))

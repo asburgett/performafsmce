@@ -26,7 +26,8 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        // show a view to create a new organization
+        return view('clients.create');
     }
 
     /**
@@ -37,7 +38,9 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Client::create($this->validateClient());
+
+        return redirect('/clients');
     }
 
     /**
@@ -46,19 +49,9 @@ class ClientController extends Controller
      * @param  \App\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function show($client_id)
+    public function show(Client $client)
     {
-        $data = array();
-        $data['client_information'] = array();
-        $data['client_site_information'] = array();
-
-        $client = Client::where('id', '=', $client_id)->get();
-        array_push($data['client_information'], $client[0]);
-
-        $client_sites = ClientSite::where('client_id', '=', $client_id)->get();
-        array_push($data['client_site_information'], $client_sites);
-        
-        return view('clients.show', compact('data'));
+        return view('clients.show', ['client' => $client]);
     }
 
     /**
@@ -69,7 +62,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        return view('clients.edit', ['client' => $client]);
     }
 
     /**
@@ -81,7 +74,9 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        //
+        $client->update($this->validateClient());
+
+        return redirect('/clients/'. $client->id);
     }
 
     /**
@@ -93,5 +88,12 @@ class ClientController extends Controller
     public function destroy(Client $client)
     {
         //
+    }
+
+    protected function validateClient()
+    {
+        return request()->validate([
+            'name' => ['required']
+        ]);
     }
 }

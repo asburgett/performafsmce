@@ -29,7 +29,12 @@ Route::put('/organizations/{organization}', 'OrganizationController@update')->mi
 Route::delete('/organizations/{organization}', 'OrganizationController@delete')->middleware('auth');
 
 Route::get('/divisions', 'DivisionController@index')->middleware('auth');
-Route::get('/divisions/{division_id}', 'DivisionController@show')->middleware('auth');
+Route::post('/divisions', 'DivisionController@store')->middleware('auth');
+Route::get('/divisions/create', 'DivisionController@create')->middleware('auth');
+Route::get('/divisions/{division}', 'DivisionController@show')->middleware('auth');
+Route::get('/divisions/{division}/edit', 'DivisionController@edit')->middleware('auth');
+Route::put('/divisions/{division}', 'DivisionController@update')->middleware('auth');
+Route::delete('/divisions/{division}', 'DivisionController@delete')->middleware('auth');
 
 Route::get('/branches', 'BranchController@index')->middleware('auth');
 Route::get('/branches/{branch_id}', 'BranchController@show')->middleware('auth');
@@ -45,7 +50,12 @@ Route::get('/jobs', 'JobController@index')->middleware('auth');
 Route::get('/jobs/{job_id}', 'JobController@show')->middleware('auth');
 
 Route::get('/clients', 'ClientController@index')->middleware('auth');
-Route::get('/clients/{client_id}', 'ClientController@show')->middleware('auth');
+Route::post('/clients', 'ClientController@store')->middleware('auth');
+Route::get('/clients/create', 'ClientController@create')->middleware('auth');
+Route::get('/clients/{client}', 'ClientController@show')->middleware('auth');
+Route::get('/clients/{client}/edit', 'ClientController@edit')->middleware('auth');
+Route::put('/clients/{client}', 'ClientController@update')->middleware('auth');
+Route::delete('/clients/{client}', 'ClientController@delete')->middleware('auth');
 
 Route::get('/clientsites', 'ClientSiteController@index')->middleware('auth');
 Route::get('/clientsites/{clientsite_id}', 'ClientSiteController@show')->middleware('auth');

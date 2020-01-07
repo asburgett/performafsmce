@@ -4,6 +4,9 @@ insert into users (name, email, password, created_at, updated_at) values ('Adam 
 # Organizations
 insert into organizations (name, created_at, updated_at) values ('Enervise', '2019-12-24 13:56:01', '2019-12-24 13:56:01');
 
+# Divisions
+insert into divisions (organization_id, name, created_at, updated_at) values (1, 'Regional Service', '2019-12-24 13:56:01', '2019-12-24 13:56:01');
+
 # Clients
 insert into clients (name, status, created_at, updated_at) values ('Hillside Technologies', 1, '2019-12-24 13:56:01', '2019-12-24 13:56:01');
 

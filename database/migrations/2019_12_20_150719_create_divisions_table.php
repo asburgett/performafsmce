@@ -15,6 +15,7 @@ class CreateDivisionsTable extends Migration
     {
         Schema::create('divisions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('organization_id');
             $table->string('name');
             $table->timestamps();
         });

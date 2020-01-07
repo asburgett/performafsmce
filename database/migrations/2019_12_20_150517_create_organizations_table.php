@@ -16,6 +16,8 @@ class CreateOrganizationsTable extends Migration
         Schema::create('organizations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->tinyInteger('is_default')->default('0');
+            $table->tinyInteger('status')->default('1');
             $table->timestamps();
         });
     }

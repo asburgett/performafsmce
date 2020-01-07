@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Organization;
 use App\Division;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class DivisionController extends Controller
      */
     public function index()
     {
-        //
+        return view('divisions.index', ['divisions' => Division::all()]);
     }
 
     /**
@@ -24,7 +25,8 @@ class DivisionController extends Controller
      */
     public function create()
     {
-        //
+        // show a view to create a new division
+        return view('divisions.create', ['organizations' => Organization::all()]);
     }
 
     /**
@@ -35,7 +37,10 @@ class DivisionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        Division::create($this->validateDivision());
+
+        return redirect('/divisions');
     }
 
     /**
@@ -46,7 +51,7 @@ class DivisionController extends Controller
      */
     public function show(Division $division)
     {
-        //
+        return view('divisions.show', ['division' => $division]);
     }
 
     /**
@@ -57,7 +62,7 @@ class DivisionController extends Controller
      */
     public function edit(Division $division)
     {
-        //
+        return view('divisions.edit', ['division' => $division]);
     }
 
     /**
@@ -81,5 +86,13 @@ class DivisionController extends Controller
     public function destroy(Division $division)
     {
         //
+    }
+
+    protected function validateDivision()
+    {
+        return request()->validate([
+            'name' => ['required'],
+            'organization_id' => ['required']
+        ]);
     }
 }

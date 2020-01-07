@@ -15,12 +15,34 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
                     <div>
-                        @foreach($organizations as $org)                            
-                            <a href="/organizations/{{ $org->id }}">{{ $org->name }}</a><br>
-                        @endforeach
+                        <table border="1">
+                            <tr>
+                                <th align="center">&nbsp;Organization Name&nbsp;</th>
+                                <th align="center">&nbsp;Status&nbsp;</th>
+                                <th align="center">&nbsp;Default&nbsp;</th></tr>
+                            @foreach($organizations as $org)                            
+                                <tr>
+                                    <td align="center">
+                                        <a href="/organizations/{{ $org->id }}">{{ $org->name }}</a>
+                                    </td>
+                                    <td align="center">
+                                        @if($org->status === 1)
+                                            Active
+                                        @else
+                                            Inactive
+                                        @endif
+                                    </td>
+                                    <td align="center">
+                                        @if ($org->is_default === 1)
+                                            True
+                                        @else
+                                            False
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </table>
                     </div>
                 </div>
             </div>

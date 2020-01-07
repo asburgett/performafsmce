@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Organizations - New</div>
-                <form method="POST" action="/organizations">
+                <div class="card-header">Divisions - New</div>
+                <form method="POST" action="/divisions">
                     @csrf
                     <div class="card-body">
                         @if (session('status'))
@@ -16,17 +16,27 @@
                         @endif
 
                         <div class="field">
+                            <label class="label" for="organization">Organization</label>
+                            <div class="control">
+                                <select name="organization_id" id="organization_id">
+                                    @foreach ($organizations as $organization)
+                                        <option value="{{ $organization->id }}">{{ $organization->name }}</option>
+                                    @endforeach
+                                </select>
+                        </div>
+
+                        <div class="field">
                             <label class="label" for="name">Name</label>
                             <div class="control">
                                 <input 
-                                    class="input @error('title') is-danger @enderror"
+                                    class="input @error('name') is-danger @enderror"
                                     type="text"
                                     name="name"
                                     id="name"
-                                    value="{{ old('title') }}"
+                                    value="{{ old('name') }}"
                                     required>
-                                @error('title')
-                                    <p class="help is-danger">{{ $errors->first('title') }}</p>
+                                @error('name')
+                                    <p class="help is-danger">{{ $errors->first('name') }}</p>
                                 @enderror
                             </div>
                         </div>

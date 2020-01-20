@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEquipmentTable extends Migration
+class CreateClientSiteLocationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreateEquipmentTable extends Migration
      */
     public function up()
     {
-        Schema::create('equipment', function (Blueprint $table) {
+        Schema::create('client_site_location', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('make');
-            $table->string('model');
-            $table->string('serial');
-            $table->string('manufacture_date');
             $table->unsignedBigInteger('client_site_id');
             $table->unsignedBigInteger('location_id');
             $table->timestamps();
+
+            $table->unique(['client_site_id', 'location_id']);
+
+            //$table->foreign('client_site_id')->references('id')->on('client_sites')->onDelete('cascade');
+            //$table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
         });
     }
 
@@ -32,6 +33,6 @@ class CreateEquipmentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipment');
+        Schema::dropIfExists('client_site_location');
     }
 }

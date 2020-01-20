@@ -12,4 +12,10 @@ class Organization extends Model
     {
     	return route('organizations.show', $this);
     }
+
+    public function divisions()
+    {
+    	// an organization can have many divisions
+    	return $this->hasMany(Division::class);
+    }
 }

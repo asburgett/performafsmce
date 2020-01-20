@@ -16,8 +16,20 @@
                         </div>
                     @endif
                     <div>
-                        @foreach($clients as $client)                            
-                            <a href="/clients/{{ $client->id }}">{{ $client->name }}</a><br>
+                        <table border="1">
+                            <tr>
+                                <th align="center">&nbsp;Client&nbsp;</th>
+                                <th align="center">&nbsp;Status&nbsp;</th>
+                            </tr>
+                        @foreach($clients as $client)
+                            <tr>
+                                <td align="center">
+                                    <a href="/clients/{{ $client->id }}">{{ $client->name }}</a>
+                                </td>
+                                <td align="center">
+                                    {{ $client->status === 1 ? 'Active' : 'Inactive' }}
+                                </td>
+                            </tr>
                         @endforeach
                     </div>
                 </div>

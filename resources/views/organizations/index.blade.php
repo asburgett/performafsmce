@@ -20,7 +20,8 @@
                             <tr>
                                 <th align="center">&nbsp;Organization Name&nbsp;</th>
                                 <th align="center">&nbsp;Status&nbsp;</th>
-                                <th align="center">&nbsp;Default&nbsp;</th></tr>
+                                <th align="center">&nbsp;Default&nbsp;</th>
+                            </tr>
                             @foreach($organizations as $org)                            
                                 <tr>
                                     <td align="center">

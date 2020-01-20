@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Address' => $baseDir . '/app/Address.php',
     'App\\Branch' => $baseDir . '/app/Branch.php',
     'App\\Client' => $baseDir . '/app/Client.php',
     'App\\ClientSite' => $baseDir . '/app/ClientSite.php',
@@ -14,6 +15,7 @@ return array(
     'App\\Division' => $baseDir . '/app/Division.php',
     'App\\Equipment' => $baseDir . '/app/Equipment.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AddressController' => $baseDir . '/app/Http/Controllers/AddressController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -3810,6 +3812,7 @@ return array(
     'Tests\\Feature\\ClientTest' => $baseDir . '/tests/Feature/ClientTest.php',
     'Tests\\Feature\\DepartmentsTest' => $baseDir . '/tests/Feature/DepartmentsTest.php',
     'Tests\\Feature\\DivisionsTest' => $baseDir . '/tests/Feature/DivisionsTest.php',
+    'Tests\\Feature\\EquipmentTest' => $baseDir . '/tests/Feature/EquipmentTest.php',
     'Tests\\Feature\\ExampleTest' => $baseDir . '/tests/Feature/ExampleTest.php',
     'Tests\\Feature\\InventoryTest' => $baseDir . '/tests/Feature/InventoryTest.php',
     'Tests\\Feature\\JobTest' => $baseDir . '/tests/Feature/JobTest.php',

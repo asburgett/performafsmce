@@ -16,6 +16,11 @@
                         </div>
                     @endif
                     <div></div>
+                    <div>
+                        @foreach($client->clientSites as $client_site)
+                            <a href="/clientsites/{{ $client_site->id }}">{{ $client_site->name }}</a>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>

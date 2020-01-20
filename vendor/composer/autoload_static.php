@@ -412,6 +412,7 @@ class ComposerStaticInit3cf818478c830b617b6e3c125cd575e2
     );
 
     public static $classMap = array (
+        'App\\Address' => __DIR__ . '/../..' . '/app/Address.php',
         'App\\Branch' => __DIR__ . '/../..' . '/app/Branch.php',
         'App\\Client' => __DIR__ . '/../..' . '/app/Client.php',
         'App\\ClientSite' => __DIR__ . '/../..' . '/app/ClientSite.php',
@@ -420,6 +421,7 @@ class ComposerStaticInit3cf818478c830b617b6e3c125cd575e2
         'App\\Division' => __DIR__ . '/../..' . '/app/Division.php',
         'App\\Equipment' => __DIR__ . '/../..' . '/app/Equipment.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AddressController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddressController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -4216,6 +4218,7 @@ class ComposerStaticInit3cf818478c830b617b6e3c125cd575e2
         'Tests\\Feature\\ClientTest' => __DIR__ . '/../..' . '/tests/Feature/ClientTest.php',
         'Tests\\Feature\\DepartmentsTest' => __DIR__ . '/../..' . '/tests/Feature/DepartmentsTest.php',
         'Tests\\Feature\\DivisionsTest' => __DIR__ . '/../..' . '/tests/Feature/DivisionsTest.php',
+        'Tests\\Feature\\EquipmentTest' => __DIR__ . '/../..' . '/tests/Feature/EquipmentTest.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\Feature\\InventoryTest' => __DIR__ . '/../..' . '/tests/Feature/InventoryTest.php',
         'Tests\\Feature\\JobTest' => __DIR__ . '/../..' . '/tests/Feature/JobTest.php',

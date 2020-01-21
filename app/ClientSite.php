@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ClientSite extends Model
 {
+    protected $guarded = [];
+    
 	public function client()
 	{
 		// a client site belongs to a client
@@ -15,7 +17,7 @@ class ClientSite extends Model
 	public function locations()
 	{
 		// a client site can have many locations
-		return $this->hasMany(Location::class);
+		return $this->belongsToMany(Location::class);
 	}
 
 	public function equipment()

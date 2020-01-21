@@ -58,7 +58,12 @@ Route::put('/clients/{client}', 'ClientController@update')->middleware('auth');
 Route::delete('/clients/{client}', 'ClientController@delete')->middleware('auth');
 
 Route::get('/clientsites', 'ClientSiteController@index')->middleware('auth');
-Route::get('/clientsites/{clientsite_id}', 'ClientSiteController@show')->middleware('auth');
+Route::post('/clientsites', 'ClientSiteController@store')->middleware('auth');
+Route::get('/clientsites/create', 'ClientSiteController@create')->middleware('auth');
+Route::get('/clientsites/{clientSite}', 'ClientSiteController@show')->middleware('auth');
+Route::get('/clientsites/{clientSite}/edit', 'ClientSiteController@edit')->middleware('auth');
+Route::put('/clientsites/{clientSite}', 'ClientSiteController@update')->middleware('auth');
+Route::delete('/clientsites/{clientSite}', 'ClientSiteController@delete')->middleware('auth');
 
 Route::get('/equipment', 'EquipmentController@index')->middleware('auth');
 Route::get('/equipment/{equipment_id}', 'EquipmentController@show')->middleware('auth');

@@ -14,7 +14,8 @@ class ClientSiteController extends Controller
      */
     public function index()
     {
-        return view('clientsites.home');
+        $clientsites = ClientSite::all();
+        return view('clientsites.index', compact('clientsites'));
     }
 
     /**
@@ -46,7 +47,8 @@ class ClientSiteController extends Controller
      */
     public function show(ClientSite $clientSite)
     {
-        //
+        //dd($clientSite);
+        return view('clientsites.show', ['clientsite' => $clientSite]);
     }
 
     /**

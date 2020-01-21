@@ -16,9 +16,17 @@ insert into client_sites (client_id, name, status, created_at, updated_at) value
 
 # Locations
 insert into locations (name, description) values ('Basement - North', 'Basement - North');
+insert into locations (name, description) values ('Basement - South', 'Basement - South');
+insert into locations (name, description) values ('Upstairs - North', 'Upstairs - North');
+insert into locations (name, description) values ('Upstairs - South', 'Upstairs - South');
+insert into locations (name, description) values ('Kitchen', 'Kitchen');
 
 # Client Site Location
 insert into client_site_location (client_site_id, location_id) values (1, 1);
+insert into client_site_location (client_site_id, location_id) values (1, 2);
+insert into client_site_location (client_site_id, location_id) values (1, 3);
+insert into client_site_location (client_site_id, location_id) values (1, 4);
+insert into client_site_location (client_site_id, location_id) values (1, 5);
 
 /*
 select cl.name, cl.status, cls.name, cls.status

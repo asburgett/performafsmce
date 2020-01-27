@@ -28,18 +28,10 @@
                                         <a href="/organizations/{{ $org->id }}">{{ $org->name }}</a>
                                     </td>
                                     <td align="center">
-                                        @if($org->status === 1)
-                                            Active
-                                        @else
-                                            Inactive
-                                        @endif
+                                        {{ $org->status === 1 ? 'Active' : 'Inactive' }}
                                     </td>
                                     <td align="center">
-                                        @if ($org->is_default === 1)
-                                            True
-                                        @else
-                                            False
-                                        @endif
+                                        {{ $org->is_default === 1 ? 'Active' : 'Inactive' }}
                                     </td>
                                 </tr>
                             @endforeach

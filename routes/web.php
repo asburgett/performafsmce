@@ -68,5 +68,5 @@ Route::delete('/clientsites/{clientSite}', 'ClientSiteController@delete')->middl
 Route::get('/equipment', 'EquipmentController@index')->middleware('auth');
 Route::get('/equipment/{equipment_id}', 'EquipmentController@show')->middleware('auth');
 
-Route::get('/workorders', 'WorkOrderController@index');
+Route::get('/workorders', 'WorkOrderController@index')->middleware('auth');
 Route::get('/workorders/{workorder_id}', 'WorkOrderController@show')->middleware('auth');

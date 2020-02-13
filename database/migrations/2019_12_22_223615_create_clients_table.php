@@ -16,6 +16,7 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('unique_name')->unique();
             $table->tinyInteger('status')->default('1');
             $table->bigInteger('mailing_address_id')->unsigned()->default(0);
             $table->timestamps();

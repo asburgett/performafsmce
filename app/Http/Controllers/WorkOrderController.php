@@ -14,8 +14,9 @@ class WorkOrderController extends Controller
      */
     public function index()
     {
-        $work_orders = WorkOrder::all();
-        return view('work_orders.home', compact('work_orders'));
+        $workorders = WorkOrder::all();
+        //dd($workorders);
+        return view('work_orders.index', compact('workorders'));
     }
 
     /**
@@ -47,7 +48,8 @@ class WorkOrderController extends Controller
      */
     public function show(Workorder $workorder)
     {
-        //
+        //dd($workorder);
+        return view('work_orders.show', ['workorder' => $workorder]);
     }
 
     /**

@@ -38,6 +38,18 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
+        /* TODO:
+        $this->validate(request() [
+            'name' => 'required'
+        ]);
+
+        Client::forceCreate([
+            'name' => request('name')
+        ]);
+
+        return ['message' => 'Project Created!'];
+        */
+        
         Client::create($this->validateClient());
 
         return redirect('/clients');

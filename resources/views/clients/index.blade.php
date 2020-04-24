@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Clients - Home&nbsp;<a href="/clients/create">(new)</a>
+                    Clients - Home&nbsp;<a href="/clients/create">&vellip;</a>
                 </div>
 
                 <div class="card-body">

@@ -73,10 +73,6 @@ body {
   color: #212529;
   text-align: left;
   background-color: #f8fafc;
-  /*
-  TODO: add a configurable dark theme
-  background-color: #000000;
-  */
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -235,7 +231,7 @@ caption {
 }
 
 th {
-  text-align: center;
+  text-align: inherit;
 }
 
 label {

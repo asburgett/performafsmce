@@ -19,12 +19,7 @@
                             <label class="label" for="name">Name</label>
                             <div class="control">
                                 <input 
-                                    class="input @error('title') is-danger @enderror"
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                    value="{{ old('title') }}"
-                                    required>
+                                    class="input @error('title') is-danger @enderror" type="text" name="name" id="name" value="{{ old('title') }}" v-model="name" required>
                                 @error('title')
                                     <p class="help is-danger">{{ $errors->first('title') }}</p>
                                 @enderror
